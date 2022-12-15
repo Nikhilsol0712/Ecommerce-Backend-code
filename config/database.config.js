@@ -4,10 +4,10 @@ const databasePassword = process.env.DEVELOPMENT_DATABASE_PASSWORD;
 
 module.exports = {
     "development": {
-      "username": "root",
+      "username": "ugzu9tqnskugahja",
       "password": databasePassword,
-      "database": "ecommerce_development_database",
-      "host": "127.0.0.1",
+      "database": "bqtp7enqpmzv8yafvpxz",
+      "host": "bqtp7enqpmzv8yafvpxz-mysql.services.clever-cloud.com",
       "dialect": "mysql"
     },
     "test": {
