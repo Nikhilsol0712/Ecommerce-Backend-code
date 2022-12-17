@@ -47,6 +47,7 @@ const signin = async (req, res) => {
         success: true,
         code: 200,
         token: token,
+        data: userData,
       });
     } else {
       //password is incorrect
