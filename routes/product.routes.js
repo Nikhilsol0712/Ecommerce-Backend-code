@@ -42,6 +42,11 @@ const routes = (app) => {
     ProductController.getAllProductsByCategoryId
   );
 
+  app.get(
+    "/ecomm/api/v1/productsById/:productId",
+    ProductController.getProductById
+  );
+
   /* to get all products in the cost range*/
   app.get(
     "/ecomm/api/v1/productsByCostRange/",

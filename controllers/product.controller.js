@@ -60,6 +60,16 @@ const getAllProductsByCategoryId = async(req, res) =>{
     });
 }
 
+const getProductById = async(req,res)=>{
+    const response = await ProductService.getProductById(req.params.productId);
+    return res.json({
+        message: 'Successfully fetched products',
+        success: true,
+        code: 200,
+        data:response
+    });
+}
+
 const getProductsByCostRange = async(req, res) =>{
     const response = await ProductService.getProductsByCostRange(req.query);
     return res.json({
@@ -70,4 +80,4 @@ const getProductsByCostRange = async(req, res) =>{
     });
 }
 
-module.exports = {getProducts, getProductsWithCategories, createProduct, updateProduct, deleteProduct, getAllProductsByCategoryId, getProductsByCostRange}
+module.exports = {getProducts, getProductsWithCategories, createProduct, updateProduct, deleteProduct, getAllProductsByCategoryId, getProductById,getProductsByCostRange}

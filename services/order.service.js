@@ -21,6 +21,7 @@ const createOrder = async(user) => {
     return order;
 }
 
+
 const addProductToOrder = async(productId, orderId) => {
     const order = await Order.findByPk(orderId);
     if(order.status !== STATUS.CREATION){
